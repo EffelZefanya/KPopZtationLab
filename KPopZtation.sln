@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KPopZtation", "KPopZtation\KPopZtation.csproj", "{DA636074-B101-4D1C-9623-3D8A4764C473}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA636074-B101-4D1C-9623-3D8A4764C473}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA636074-B101-4D1C-9623-3D8A4764C473}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA636074-B101-4D1C-9623-3D8A4764C473}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA636074-B101-4D1C-9623-3D8A4764C473}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A23F975C-B61D-4343-9829-86DA6A8D1726}
+	EndGlobalSection
+EndGlobal
