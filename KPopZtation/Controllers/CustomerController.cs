@@ -110,7 +110,7 @@ namespace KPopZtation.Controllers
             }
             if (response.Equals(""))
             {
-                CustomerRepository.AddCustomer(name, email, gender, address, password);
+                response = CustomerHandler.doRegister(name, email, gender, address, password);
             }
             return response;
         }

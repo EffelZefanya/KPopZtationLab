@@ -30,7 +30,7 @@ namespace KPopZtation.Views.Guest
             string password = passwordTxt.Text.ToString();
 
             errorLbl.Text = CustomerController.doRegister(name, email, gender, address, password);
-            if (errorLbl.Text.Equals(""))
+            if (errorLbl.Text.Equals("Customer Account Created!"))
             {
                 Response.Redirect("LogIn.aspx");
             }

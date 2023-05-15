@@ -13,7 +13,7 @@ namespace KPopZtation.Repositories
         //add edit get should be here :))
         public static Customer GetCustomer(string email, string password)
         {
-            return (from x in db.Customers where x.CustomerEmail.Equals(email) && x.CustomerPasword.Equals(password) select x).FirstOrDefault();
+            return (from x in db.Customers where x.CustomerEmail.Equals(email) && x.CustomerPasword.Equals(password) select x).FirstOrDefault();//untuk mengambil data pertama yang ditemukan dan selain itu null.
         }
 
         public static void AddCustomer(string name, string email, string gender, string address, string password)
