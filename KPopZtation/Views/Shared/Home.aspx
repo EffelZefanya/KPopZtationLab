@@ -4,9 +4,14 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Welcome to Home!</h1>
     <main>
-        <div>
-            <!-- Image here-->
-            <h5>Artist Title</h5>
-        </div>
+        <asp:GridView ID="artistGridView" runat="server" AutoGenerateColumns="False">
+            <Columns>
+                <asp:ImageField DataImageUrlField="ArtistImage" HeaderText="Artist's Image">
+                </asp:ImageField>
+                <asp:BoundField DataField="ArtistName" HeaderText="Artist's Name" />
+                <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="Artist's Detail" ShowHeader="True" Text="See More" />
+                <asp:CommandField ButtonType="Button" HeaderText="Actions" ShowDeleteButton="True" ShowEditButton="True" ShowHeader="True" />
+            </Columns>
+    </asp:GridView>
     </main>
 </asp:Content>

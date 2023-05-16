@@ -30,6 +30,7 @@ namespace KPopZtation.Views.Admin
                 artistImg.ImageUrl = "~/Assets/Images/" + artistImgFile.FileName;
                     errorLbl.ForeColor = System.Drawing.Color.Green;
                 errorLbl.Text = "Artist Inserted succesfully";
+                Response.Redirect("~/Views/Shared/Home.aspx");
             }
         }
     }

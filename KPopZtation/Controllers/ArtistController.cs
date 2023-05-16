@@ -1,4 +1,5 @@
 ﻿using KPopZtation.Models;
+using KPopZtation.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -55,7 +56,7 @@ namespace KPopZtation.Controllers
                 response = checkImage(image);
             }if(response == "")
             {
-                //add artist
+                ArtistRepository.addArtist(name, "~/Assets/Images/" + image.FileName);
             }
             return response;
         }
