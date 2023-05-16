@@ -5,9 +5,6 @@
     <h1>Update Artist</h1>
     <main>
         <div>
-            <asp:Image ID="artistImg" runat="server" />
-        </div>
-        <div>
             <asp:Label ID="nameLbl" runat="server" Text="Artist Name"></asp:Label>
             <asp:TextBox ID="ArtistNameTb" runat="server"></asp:TextBox>
         </div>
@@ -18,6 +15,6 @@
         <div>
             <asp:Label ID="errorLbl" runat="server" Text=""></asp:Label>
         </div>
-        <asp:Button ID="insertBtn" runat="server" Text="Insert Artist" OnClick="insertBtn_Click" />
+        <asp:Button ID="updateBtn" runat="server" Text="Update Artist Information" OnClick="updateBtn_Click" />
     </main>
 </asp:Content>

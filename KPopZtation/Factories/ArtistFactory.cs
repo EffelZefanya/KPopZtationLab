@@ -17,5 +17,14 @@ namespace KPopZtation.Factories
             artist.ArtistId = (from x in db.Artists select x.ArtistId).ToList().LastOrDefault() + 1;
             return artist;
         }
+
+        public static Artist updateArtist(int id, string name, string imagePath)
+        {
+            Artist artist = new Artist();
+            artist.ArtistName = name;
+            artist.ArtistImage = imagePath;
+            artist.ArtistId = id;
+            return artist;
+        }
     }
 }

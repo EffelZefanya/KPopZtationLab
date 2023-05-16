@@ -60,5 +60,23 @@ namespace KPopZtation.Controllers
             }
             return response;
         }
+
+        public static string doUpdateArtist(int id, string name, FileUpload image)
+        {
+            string response = "";
+            if (response == "")
+            {
+                response = checkName(name);
+            }
+            if (response == "")
+            {
+                response = checkImage(image);
+            }
+            if (response == "")
+            {
+                ArtistRepository.updateArtist(id, name, "~/Assets/Images/" + image.FileName);
+            }
+            return response;
+        }
     }
 }

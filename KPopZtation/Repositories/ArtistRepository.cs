@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.UI.WebControls;
 
 namespace KPopZtation.Repositories
 {
@@ -36,6 +37,13 @@ namespace KPopZtation.Repositories
             return db.SaveChanges();
         }
 
-        
+        public static void updateArtist(int id, string name, string imagePath)
+        {
+            Artist artist = ArtistFactory.createArtist(name, imagePath);
+            deleteArtist(id);
+            db.Artists.Add(artist);
+            db.SaveChanges();
+            return;
+        }
     }
 }

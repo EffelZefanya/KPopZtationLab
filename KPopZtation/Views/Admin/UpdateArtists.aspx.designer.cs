@@ -15,15 +15,6 @@ namespace KPopZtation.Views.Admin
     {
 
         /// <summary>
-        /// artistImg control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image artistImg;
-
-        /// <summary>
         /// nameLbl control.
         /// </summary>
         /// <remarks>
@@ -69,12 +60,12 @@ namespace KPopZtation.Views.Admin
         protected global::System.Web.UI.WebControls.Label errorLbl;
 
         /// <summary>
-        /// insertBtn control.
+        /// updateBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button insertBtn;
+        protected global::System.Web.UI.WebControls.Button updateBtn;
     }
 }

@@ -14,6 +14,11 @@ namespace KPopZtation.Views.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+        }
+
+        protected void updateBtn_Click(object sender, EventArgs e)
+        {
             int id = Convert.ToInt32(Request["ID"]);
 
             Artist artist = ArtistRepository.getArtist(id);
@@ -22,14 +27,13 @@ namespace KPopZtation.Views.Admin
             string name = ArtistNameTb.Text;
 
             errorLbl.ForeColor = System.Drawing.Color.Red;
-            errorLbl.Text = ArtistController.doInsertArtist(name, image);
+            errorLbl.Text = ArtistController.doUpdateArtist(id, name, image);
 
             if (errorLbl.Text == "")
             {
                 artistImgFile.SaveAs(Server.MapPath("~/Assets/Images/" + artistImgFile.FileName));
-                artistImg.ImageUrl = "~/Assets/Images/" + artistImgFile.FileName;
                 errorLbl.ForeColor = System.Drawing.Color.Green;
-                errorLbl.Text = "Artist Inserted succesfully";
+                errorLbl.Text = "Artist Updated succesfully";
                 Response.Redirect("~/Views/Shared/Home.aspx");
             }
         }
