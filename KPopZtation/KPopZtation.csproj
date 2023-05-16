@@ -79,7 +79,6 @@
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
-    <Content Include="Assets\Images\newjeans-jadi-global-ambassador-levis-1_43.jpeg" />
     <Content Include="Assets\SQLFiles\KPopZetationDatabase.sql" />
     <Content Include="Assets\SQLFiles\SQLQuery1.sql" />
     <Content Include="Models\Model1.Context.tt">
@@ -92,12 +91,15 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Content Include="Views\Guest\Home.aspx" />
+    <Content Include="Views\Admin\InsertArtist.aspx" />
+    <Content Include="Views\Shared\Home.aspx" />
+    <Content Include="Views\Shared\HomePrototype.aspx" />
     <Content Include="Views\Guest\LogIn.aspx" />
     <Content Include="Views\Guest\Register.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ArtistController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Factories\CustomerFactory.cs" />
     <Compile Include="Handlers\CustomerHandler.cs" />
@@ -137,12 +139,26 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CustomerRepository.cs" />
     <Compile Include="Repositories\Database.cs" />
-    <Compile Include="Views\Guest\Home.aspx.cs">
+    <Compile Include="Views\Admin\InsertArtist.aspx.cs">
+      <DependentUpon>InsertArtist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\InsertArtist.aspx.designer.cs">
+      <DependentUpon>InsertArtist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Guest\Home.aspx.designer.cs">
+    <Compile Include="Views\Shared\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\HomePrototype.aspx.cs">
+      <DependentUpon>HomePrototype.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\HomePrototype.aspx.designer.cs">
+      <DependentUpon>HomePrototype.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Guest\LogIn.aspx.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
@@ -184,7 +200,7 @@
     <Content Include="WebMasterForms\Master.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Admin\" />
+    <Folder Include="Assets\Images\" />
     <Folder Include="Views\Customer\" />
   </ItemGroup>
   <ItemGroup>

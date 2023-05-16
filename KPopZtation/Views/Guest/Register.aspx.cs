@@ -12,6 +12,7 @@ namespace KPopZtation.Views.Guest
     public partial class Register : System.Web.UI.Page
     {
         Database1Entities db = Repositories.Database.GetInstance();
+        public string userRole = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             List<string> genderList = new List<string>();
@@ -19,6 +20,12 @@ namespace KPopZtation.Views.Guest
             genderList.Add("Female");
             genderDDL.DataSource = genderList;
             genderDDL.DataBind();
+
+            userRole = (string)Session["role"];
+            if (userRole != null)
+            {
+                Response.Redirect("../Views/Shared/Home.aspx");
+            }
         }
 
         protected void registerBtn_Click(object sender, EventArgs e)

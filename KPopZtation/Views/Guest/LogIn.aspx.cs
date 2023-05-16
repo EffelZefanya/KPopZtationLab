@@ -13,9 +13,14 @@ namespace KPopZtation.Views.Guest
     public partial class LogIn : System.Web.UI.Page
     {
         private Database1Entities db = Repositories.Database.GetInstance();
+        public string userRole = "";
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            userRole = (string) Session["role"];
+            if(userRole != null)
+            {
+                Response.Redirect("../Views/Shared/Home.aspx");
+            }
         }
 
         protected void logInButton_Click(object sender, EventArgs e)
@@ -57,7 +62,7 @@ namespace KPopZtation.Views.Guest
                     Application["count_user"] = ((int)Application["count_user"]) + 1;
                 }
 
-                Response.Redirect("Home.aspx");
+                Response.Redirect("~/Views/Shared/Home.aspx");
             }
             else
             {
