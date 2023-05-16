@@ -1,4 +1,6 @@
-﻿using KPopZtation.Models;
+﻿using KPopZtation.Controllers;
+using KPopZtation.Handlers;
+using KPopZtation.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,11 +24,12 @@ namespace KPopZtation.Views.Guest
             string password = passwordBox.Value;
             bool isRemember = rememberMe.Checked;
 
-            var user = (from x in db.Customers where x.CustomerEmail.Equals(email) && x.CustomerPasword.Equals(password) select x).FirstOrDefault();//untuk mengambil data pertama yang ditemukan dan selain itu null.
+            Customer user = CustomerController.doLogIn(email, password);
 
             if(user != null)
             {
                 Session["user"] = user;
+                Session["role"] = user.CustomerRole;
                 //session bisa langsung menyimpan object
                 if (isRemember)
                 {
@@ -34,9 +37,16 @@ namespace KPopZtation.Views.Guest
                     cookie.Value = user.CustomerId.ToString();
                     cookie.Expires = DateTime.Now.AddHours(1);
                     Response.Cookies.Add(cookie);
+                    
+
+                    HttpCookie roleCookie = new HttpCookie("role_cookie");
+                    roleCookie.Value = user.CustomerRole;
+                    roleCookie.Expires = DateTime.Now.AddHours(1);
+                    Response.Cookies.Add(roleCookie);
 
                     /*Untuk cek apakah si cookie ada atau engga. Buka chrome->inpsect->application->storage->cookies*/
                 }
+                
 
                 if (Application["count_user"] == null)
                 {
@@ -47,11 +57,11 @@ namespace KPopZtation.Views.Guest
                     Application["count_user"] = ((int)Application["count_user"]) + 1;
                 }
 
-                Response.Redirect("GuestHome.aspx");
+                Response.Redirect("Home.aspx");
             }
             else
             {
-                error.Text = "User not found";
+                error.Text = "Email or Password is incorrect";
             }
         }
     }

@@ -75,18 +75,19 @@ namespace KPopZtation.Controllers
             return response;
         }
 
-        public static string doLogIn(string name, string password)
+        public static Customer doLogIn(string name, string password)
         {
             string response = checkName(name);
+            Customer customer = new Customer();
             if (response.Equals(""))
             {
                 response = checkPassword(password);
             }
             if (response.Equals(""))
             {
-                response = CustomerHandler.doLogIn(name, password);
+                customer = CustomerHandler.doLogIn(name, password);
             }
-            return response;
+            return customer;
         }
 
         public static string doRegister(string name, string email, string gender, string address, string password)

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebMasterForms/Guest.Master" AutoEventWireup="true" CodeBehind="GuestHome.aspx.cs" Inherits="KPopZtation.Views.Guest.GuestHome" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebMasterForms/Master.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="KPopZtation.Views.Guest.GuestHome" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

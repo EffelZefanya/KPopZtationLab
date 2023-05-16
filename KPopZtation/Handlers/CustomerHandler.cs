@@ -8,10 +8,10 @@ namespace KPopZtation.Handlers
 {
     public class CustomerHandler
     {
-        public static string doLogIn(string email, string password)
+        public static Customer doLogIn(string email, string password)
         {
             Customer customer = Repositories.CustomerRepository.GetCustomer(email, password);
-            return customer != null ? "Success" : "Email or Password is incorrect";
+            return customer;
         }
 
         public static string doRegister(string name, string email, string gender, string address, string password)

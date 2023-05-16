@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.Master.cs" Inherits="KPopZtation.WebMasterForms.Guest" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Master Placeholder Title</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <%if (userRole == "admin")
+                {%>
+                <nav>
+                    <ul>
+                        <li>HomeAdmin</li>
+                    </ul>
+                </nav>
+                <% }%>
+            <%else if (userRole == "cust")
+                {%>
+                <nav>
+                    <ul>
+                        <li>HomeCust</li>
+                    </ul>
+                </nav>
+            <% } %>
+            <% else
+                { %>
+                <nav>
+                    <ul>
+                        <li>HomeGuest</li>
+                    </ul>
+                </nav>
+            <%} %>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
