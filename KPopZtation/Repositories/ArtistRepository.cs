@@ -16,6 +16,11 @@ namespace KPopZtation.Repositories
             return artists;
         }
 
+        public static Artist getArtist(int id)
+        {
+            return (from x in db.Artists where x.ArtistId == id select x).FirstOrDefault();
+        }
+
         public static string addArtist(string name, string imagePath)
         {
             Artist artist = ArtistFactory.createArtist(name, imagePath);
@@ -23,5 +28,14 @@ namespace KPopZtation.Repositories
             db.SaveChanges();
             return "New artist data suceesfully inserted";
         }
+
+        public static int deleteArtist(int id)
+        {
+            Artist artist = getArtist(id);
+            db.Artists.Remove(artist);
+            return db.SaveChanges();
+        }
+
+        
     }
 }

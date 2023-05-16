@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Welcome to Home!</h1>
     <main>
-        <asp:GridView ID="artistGridView" runat="server" AutoGenerateColumns="False">
+        <asp:GridView ID="artistGridView" runat="server" AutoGenerateColumns="False" OnRowDeleting="artistGridView_RowDeleting" OnRowEditing="artistGridView_RowEditing">
             <Columns>
                 <asp:ImageField DataImageUrlField="ArtistImage" HeaderText="Artist's Image">
                 </asp:ImageField>
