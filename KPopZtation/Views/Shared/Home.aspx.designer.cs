@@ -24,6 +24,15 @@ namespace KPopZtation.Views.Shared
         protected global::System.Web.UI.WebControls.GridView artistGridView;
 
         /// <summary>
+        /// InsertBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button InsertBtn;
+
+        /// <summary>
         /// artistGridView1 control.
         /// </summary>
         /// <remarks>

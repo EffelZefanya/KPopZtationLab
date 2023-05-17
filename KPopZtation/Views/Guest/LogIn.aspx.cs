@@ -19,7 +19,7 @@ namespace KPopZtation.Views.Guest
             userRole = (string) Session["role"];
             if(userRole != null)
             {
-                Response.Redirect("../Views/Shared/Home.aspx");
+                Response.Redirect("~/Views/Shared/Home.aspx");
             }
         }
 
@@ -52,7 +52,7 @@ namespace KPopZtation.Views.Guest
                     /*Untuk cek apakah si cookie ada atau engga. Buka chrome->inpsect->application->storage->cookies*/
                 }
                 
-
+                /*
                 if (Application["count_user"] == null)
                 {
                     Application["count_user"] = 1;
@@ -61,6 +61,7 @@ namespace KPopZtation.Views.Guest
                 {
                     Application["count_user"] = ((int)Application["count_user"]) + 1;
                 }
+                */
 
                 Response.Redirect("~/Views/Shared/Home.aspx");
             }

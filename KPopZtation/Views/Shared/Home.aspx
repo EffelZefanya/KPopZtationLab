@@ -16,6 +16,7 @@
                 <asp:CommandField ButtonType="Button" HeaderText="Actions" ShowCancelButton="False" ShowDeleteButton="True" ShowEditButton="True" ShowHeader="True" />
             </Columns>
     </asp:GridView>
+        <asp:Button ID="InsertBtn" runat="server" Text="Insert New Artist" OnClick="InsertBtn_Click" />
         <%} %>
 
         <%else

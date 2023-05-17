@@ -15,5 +15,43 @@ namespace KPopZtation.WebMasterForms
         {
             userRole = (String) Session["role"];
         }
+
+        protected void LogOutBtn_Click(object sender, EventArgs e)
+        {
+            string[] cookies = Request.Cookies.AllKeys;
+
+            foreach (string cookie in cookies)
+            {
+                Response.Cookies[cookie].Expires = DateTime.Now.AddDays(-1);
+            }
+            Session.Remove("user");
+            Session.Remove("role");
+            Response.Redirect("~/Views/Guest/LogIn.aspx");
+        }
+
+        protected void homeBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Views/Guest/LogIn.aspx");
+        }
+
+        protected void updateProfileBtn_Click(object sender, EventArgs e)
+        {
+            // Response.Redirect("~/Views/Guest/zzz.aspx");
+        }
+
+        protected void transactionBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void LogInBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Views/Guest/LogIn.aspx");
+        }
+
+        protected void registerBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Views/Guest/Register.aspx");
+        }
     }
 }

@@ -40,5 +40,10 @@ namespace KPopZtation.Views.Shared
             string id = row.Cells[0].Text.ToString();
             Response.Redirect("~/Views/Admin/UpdateArtists.aspx?ID=" + id);
         }
+
+        protected void InsertBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Views/Admin/InsertArtist.aspx");
+        }
     }
 }
