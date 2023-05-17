@@ -22,6 +22,11 @@ namespace KPopZtation.Repositories
             return (from x in db.Artists where x.ArtistId == id select x).FirstOrDefault();
         }
 
+        public static List<Artist> getArtistForGridView(int id)
+        {
+            return (from x in db.Artists where x.ArtistId == id select x).ToList();
+        }
+
         public static string addArtist(string name, string imagePath)
         {
             Artist artist = ArtistFactory.createArtist(name, imagePath);

@@ -19,12 +19,19 @@ namespace KPopZtation.Repositories
         {
             return (from x in db.Albums where x.AlbumId == id select x).FirstOrDefault();
         }
-        /*
-        public static string addAlbum()
+
+        public static List<Album> GetAllAlbumsFromArtist(int id)
+        {
+            return (from x in db.Albums where x.ArtistId == id select x).ToList();
+        }
+        public static string addAlbum(int artistId, string name, string desc, string image, int price, int stock)
         {
 
+            Album album = AlbumFactory.createAlbum(artistId, name, desc, image, price, stock);
+            db.Albums.Add(album);
+            db.SaveChanges();
+            return "Album succesfully inserted";
         }
-        */
 
         public static string deleteAlbum(int id)
         {
@@ -39,6 +46,16 @@ namespace KPopZtation.Repositories
             db.Albums.RemoveRange(listOfArlbum);
             return db.SaveChanges();
         }
+
+        /*
+        public static string updateAlbum()
+        {
+            Artist artist = ArtistFactory.createArtist(name, imagePath);
+            deleteArtist(id);
+            db.Artists.Add(artist);
+            db.SaveChanges();
+            return;
+        }*/
 
     }
 }

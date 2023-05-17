@@ -45,5 +45,19 @@ namespace KPopZtation.Views.Shared
         {
             Response.Redirect("~/Views/Admin/InsertArtist.aspx");
         }
+
+        protected void artistGridView1_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        {
+            GridViewRow row = artistGridView.Rows[e.NewSelectedIndex];
+            string id = row.Cells[0].Text.ToString();
+            Response.Redirect("~/Views/Shared/ArtistDetail.aspx?ID=" + id);
+        }
+
+        protected void artistGridView_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        {
+            GridViewRow row = artistGridView.Rows[e.NewSelectedIndex];
+            string id = row.Cells[0].Text.ToString();
+            Response.Redirect("~/Views/Shared/ArtistDetail.aspx?ID=" + id);
+        }
     }
 }

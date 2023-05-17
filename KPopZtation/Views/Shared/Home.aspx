@@ -6,14 +6,13 @@
     <main>
         <%if (userRole == "admin")
             { %>
-        <asp:GridView ID="artistGridView" runat="server" AutoGenerateColumns="False" OnRowDeleting="artistGridView_RowDeleting" OnRowEditing="artistGridView_RowEditing">
+        <asp:GridView ID="artistGridView" runat="server" AutoGenerateColumns="False" OnRowDeleting="artistGridView_RowDeleting" OnRowEditing="artistGridView_RowEditing" OnSelectedIndexChanging="artistGridView_SelectedIndexChanging">
             <Columns>
                 <asp:BoundField DataField="ArtistId" HeaderText="ID" SortExpression="ArtistId" />
                 <asp:ImageField DataImageUrlField="ArtistImage" HeaderText="Image">
                 </asp:ImageField>
                 <asp:BoundField DataField="ArtistName" HeaderText="Name" SortExpression="ArtistName" />
-                <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="Details" ShowHeader="True" Text="More details" />
-                <asp:CommandField ButtonType="Button" HeaderText="Actions" ShowCancelButton="False" ShowDeleteButton="True" ShowEditButton="True" ShowHeader="True" />
+                <asp:CommandField ButtonType="Button" HeaderText="Actions" ShowCancelButton="False" ShowDeleteButton="True" ShowEditButton="True" ShowHeader="True" ShowSelectButton="True" />
             </Columns>
     </asp:GridView>
         <asp:Button ID="InsertBtn" runat="server" Text="Insert New Artist" OnClick="InsertBtn_Click" />
@@ -21,13 +20,13 @@
 
         <%else
             { %>
-        <asp:GridView ID="artistGridView1" runat="server" AutoGenerateColumns="False">
+        <asp:GridView ID="artistGridView1" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanging="artistGridView1_SelectedIndexChanging">
             <Columns>
                 <asp:BoundField DataField="ArtistId" HeaderText="ID" SortExpression="ArtistId" />
                 <asp:ImageField DataImageUrlField="ArtistImage" HeaderText="Image">
                 </asp:ImageField>
                 <asp:BoundField DataField="ArtistName" HeaderText="Name" SortExpression="ArtistName" />
-                <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="Details" ShowHeader="True" Text="More details" />
+                <asp:CommandField ButtonType="Button" HeaderText="Actions" ShowSelectButton="True" />
             </Columns>
     </asp:GridView>
         <%} %>

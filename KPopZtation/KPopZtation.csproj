@@ -79,6 +79,7 @@
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <Content Include="Assets\Images\LoveAndLetter.jpg" />
     <Content Include="Assets\SQLFiles\KPopZetationDatabase.sql" />
     <Content Include="Assets\SQLFiles\SQLQuery1.sql" />
     <Content Include="Models\Model1.Context.tt">
@@ -91,6 +92,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\Admin\InsertAlbum.aspx" />
+    <Content Include="Views\Shared\ArtistDetail.aspx" />
     <Content Include="Views\Admin\InsertArtist.aspx" />
     <Content Include="Views\Admin\UpdateArtists.aspx" />
     <Content Include="Views\Shared\Home.aspx" />
@@ -100,8 +103,10 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AlbumController.cs" />
     <Compile Include="Controllers\ArtistController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Factories\AlbumFactory.cs" />
     <Compile Include="Factories\ArtistFactory.cs" />
     <Compile Include="Factories\CustomerFactory.cs" />
     <Compile Include="Handlers\CustomerHandler.cs" />
@@ -144,6 +149,20 @@
     <Compile Include="Repositories\ArtistRepository.cs" />
     <Compile Include="Repositories\CustomerRepository.cs" />
     <Compile Include="Repositories\Database.cs" />
+    <Compile Include="Views\Admin\InsertAlbum.aspx.cs">
+      <DependentUpon>InsertAlbum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\InsertAlbum.aspx.designer.cs">
+      <DependentUpon>InsertAlbum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\ArtistDetail.aspx.cs">
+      <DependentUpon>ArtistDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\ArtistDetail.aspx.designer.cs">
+      <DependentUpon>ArtistDetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Admin\InsertArtist.aspx.cs">
       <DependentUpon>InsertArtist.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -212,7 +231,6 @@
     <Content Include="WebMasterForms\Master.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\Images\" />
     <Folder Include="Views\Customer\" />
   </ItemGroup>
   <ItemGroup>
