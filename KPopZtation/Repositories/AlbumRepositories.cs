@@ -20,6 +20,11 @@ namespace KPopZtation.Repositories
             return (from x in db.Albums where x.AlbumId == id select x).FirstOrDefault();
         }
 
+        public static List<Album> GetAlbumForGridView(int id)
+        {
+            return (from x in db.Albums where x.AlbumId == id select x).ToList();
+        }
+
         public static List<Album> GetAllAlbumsFromArtist(int id)
         {
             return (from x in db.Albums where x.ArtistId == id select x).ToList();
@@ -55,6 +60,16 @@ namespace KPopZtation.Repositories
             db.Albums.Add(album);
             db.SaveChanges();
             return "Album succefully updated";
+        }
+
+        public static void buyAlbum(int albumId, int qty)
+        {
+            Album album = GetAlbum(albumId);
+            album.AlbumStock -= qty;
+            deleteAlbum(albumId);
+            db.Albums.Add(album);
+            db.SaveChanges();
+            return;
         }
 
     }

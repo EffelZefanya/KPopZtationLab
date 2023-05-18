@@ -25,5 +25,6 @@ namespace KPopZtation.Handlers
                 ArtistRepository.deleteArtist(id);
             }
         }
+
     }
 }

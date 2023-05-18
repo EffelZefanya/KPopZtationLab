@@ -53,5 +53,10 @@ namespace KPopZtation.WebMasterForms
         {
             Response.Redirect("~/Views/Guest/Register.aspx");
         }
+
+        protected void cartBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Views/Cust/CartPage.aspx");
+        }
     }
 }

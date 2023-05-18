@@ -12,18 +12,21 @@ namespace KPopZtation.Views.Admin
     public partial class ArtistDetail : System.Web.UI.Page
     {
         Database1Entities db = Database.GetInstance();
-        int id;
+        int artistId;
         public string userRole;
         protected void Page_Load(object sender, EventArgs e)
         {
-            id = Convert.ToInt32(Request["ID"]);
+            artistId = Convert.ToInt32(Request["ID"]);
             userRole = (string)Session["role"];
 
-            artistGridView.DataSource = Repositories.ArtistRepository.getArtistForGridView(id);
+            artistGridView.DataSource = Repositories.ArtistRepository.getArtistForGridView(artistId);
             artistGridView.DataBind();
 
-            AlbumGridView.DataSource = AlbumRepositories.GetAllAlbumsFromArtist(id);
+            AlbumGridView.DataSource = AlbumRepositories.GetAllAlbumsFromArtist(artistId);
             AlbumGridView.DataBind();
+
+            AlbumGridView1.DataSource = AlbumRepositories.GetAllAlbumsFromArtist(artistId);
+            AlbumGridView1.DataBind();
         }
 
         protected void AlbumGridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
@@ -43,12 +46,12 @@ namespace KPopZtation.Views.Admin
         {
             GridViewRow row = AlbumGridView.Rows[e.NewSelectedIndex];
             string id = row.Cells[0].Text.ToString();
-            Response.Redirect("~/Views/Shared/AlbumDetail.aspx?ID" + id);
+            Response.Redirect("~/Views/Shared/AlbumDetail.aspx?ID=" + id);
         }
 
         protected void InsertAlbumBtn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Views/Admin/InsertAlbum.aspx?ID=" + id);
+            Response.Redirect("~/Views/Admin/InsertAlbum.aspx?ID=" + artistId);
         }
 
         protected void AlbumGridView_RowEditing(object sender, GridViewEditEventArgs e)
@@ -62,7 +65,7 @@ namespace KPopZtation.Views.Admin
         {
             GridViewRow row = AlbumGridView.Rows[e.NewSelectedIndex];
             string id = row.Cells[0].Text.ToString();
-            Response.Redirect("~/Views/Shared/AlbumDetail.aspx?ID" + id);
+            Response.Redirect("~/Views/Shared/AlbumDetail.aspx?ID=" + id);
         }
     }
 }

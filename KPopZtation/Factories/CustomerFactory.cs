@@ -11,13 +11,21 @@ namespace KPopZtation.Factories
         private static Database1Entities db = Repositories.Database.GetInstance();
         public static Customer createCustomer(string name, string email, string gender, string address, string password)
         {
+            Customer firstCustomer = (from x in db.Customers select x).FirstOrDefault();
             Customer customer = new Customer();
+            if (firstCustomer == null)
+            {
+                customer.CustomerId = 1;
+            }
+            else
+            {
+                customer.CustomerId = (from x in db.Customers select x.CustomerId).ToList().LastOrDefault() + 1;
+            }
             customer.CustomerName = name;
             customer.CustomerEmail = email;
             customer.CustomerGender = gender;
             customer.CustomerAddress = address;
             customer.CustomerPasword = password;
-            customer.CustomerId = (from x in db.Customers select x.CustomerId).ToList().LastOrDefault() + 1;
             customer.CustomerRole = "cust";
             return customer;
         }

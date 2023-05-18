@@ -13,8 +13,17 @@ namespace KPopZtation.Factories
 
         public static Album createAlbum(int artistId, string name, string desc, string image, int price, int stock)
         {
+            Album firstAlbum = (from x in db.Albums select x).FirstOrDefault();
             Album album = new Album();
-            album.AlbumId = (from x in db.Albums select x.AlbumId).ToList().LastOrDefault() + 1;
+            if(firstAlbum == null)
+            {
+                album.AlbumId = 1;
+            }
+            else
+            {
+                album.AlbumId = (from x in db.Albums select x.AlbumId).ToList().LastOrDefault() + 1;
+
+            }
             album.AlbumName = name;
             album.AlbumDescription = desc;
             album.AlbumImage = image;

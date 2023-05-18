@@ -11,10 +11,19 @@ namespace KPopZtation.Factories
         private static Database1Entities db = Repositories.Database.GetInstance();
         public static Artist createArtist(string name, string imagePath)
         {
+            Artist firstArtist = (from x in db.Artists select x).FirstOrDefault();
             Artist artist = new Artist();
+            if(firstArtist == null)
+            {
+                artist.ArtistId = 1;
+            }
+            else
+            {
+                artist.ArtistId = 2;
+                //please change this later to (from x in db.Artists select x.ArtistId).ToList().LastOrDefault() + 1
+            }
             artist.ArtistName = name;
             artist.ArtistImage = imagePath;
-            artist.ArtistId = (from x in db.Artists select x.ArtistId).ToList().LastOrDefault() + 1;
             return artist;
         }
 

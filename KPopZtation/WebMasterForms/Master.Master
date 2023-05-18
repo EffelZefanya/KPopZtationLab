@@ -33,7 +33,8 @@
                     <div>You're logged in as customer</div>
                     <ul>
                         <li><asp:Button ID="homeCustBtn" runat="server" Text="Home" OnClick="homeBtn_Click" /></li>
-                        <li><a>Cart</a></li>
+                        <li>
+                            <asp:Button ID="cartBtn" runat="server" Text="Cart" OnClick="cartBtn_Click" /></li>
                         <li><a>Transaction</a></li>
                         <li><asp:Button ID="updateCustomerProfileBtn" runat="server" Text="Update Profile" OnClick="updateProfileBtn_Click" /></li>
                         <li><asp:Button ID="LogOutCustBtn" runat="server" Text="Log Out" OnClick="LogOutBtn_Click" /></li>

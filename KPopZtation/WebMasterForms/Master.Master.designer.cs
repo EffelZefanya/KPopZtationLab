@@ -78,6 +78,15 @@ namespace KPopZtation.WebMasterForms
         protected global::System.Web.UI.WebControls.Button homeCustBtn;
 
         /// <summary>
+        /// cartBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button cartBtn;
+
+        /// <summary>
         /// updateCustomerProfileBtn control.
         /// </summary>
         /// <remarks>
