@@ -7,128 +7,128 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace KPopZtation.WebMasterForms
+namespace KPopZtation.Views.Admin
 {
 
 
-    public partial class Guest
+    public partial class UpdateAlbum
     {
 
         /// <summary>
-        /// head control.
+        /// currentAlbumGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.GridView currentAlbumGridView;
 
         /// <summary>
-        /// form1 control.
+        /// nameLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label nameLbl;
 
         /// <summary>
-        /// homeAdminBtn control.
+        /// nameTbx control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button homeAdminBtn;
+        protected global::System.Web.UI.WebControls.TextBox nameTbx;
 
         /// <summary>
-        /// transactionBtn control.
+        /// descLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button transactionBtn;
+        protected global::System.Web.UI.WebControls.Label descLbl;
 
         /// <summary>
-        /// updateAdminProfileBtn control.
+        /// descTbx control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button updateAdminProfileBtn;
+        protected global::System.Web.UI.WebControls.TextBox descTbx;
 
         /// <summary>
-        /// LogOutAdminBtn control.
+        /// priceLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LogOutAdminBtn;
+        protected global::System.Web.UI.WebControls.Label priceLbl;
 
         /// <summary>
-        /// homeCustBtn control.
+        /// priceTbx control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button homeCustBtn;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl priceTbx;
 
         /// <summary>
-        /// updateCustomerProfileBtn control.
+        /// stockLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button updateCustomerProfileBtn;
+        protected global::System.Web.UI.WebControls.Label stockLbl;
 
         /// <summary>
-        /// LogOutCustBtn control.
+        /// stockTbx control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LogOutCustBtn;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl stockTbx;
 
         /// <summary>
-        /// homeGuestBtn control.
+        /// imageLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button homeGuestBtn;
+        protected global::System.Web.UI.WebControls.Label imageLbl;
 
         /// <summary>
-        /// logInBtn control.
+        /// albumImageFile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button logInBtn;
+        protected global::System.Web.UI.WebControls.FileUpload albumImageFile;
 
         /// <summary>
-        /// registerBtn control.
+        /// errorLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button registerBtn;
+        protected global::System.Web.UI.WebControls.Label errorLbl;
 
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// updateAlbumBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Button updateAlbumBtn;
     }
 }

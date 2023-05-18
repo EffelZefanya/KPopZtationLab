@@ -93,6 +93,8 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="Views\Admin\InsertAlbum.aspx" />
+    <Content Include="Views\Admin\UpdateAlbum.aspx" />
+    <Content Include="Views\Shared\AlbumDetail.aspx" />
     <Content Include="Views\Shared\ArtistDetail.aspx" />
     <Content Include="Views\Admin\InsertArtist.aspx" />
     <Content Include="Views\Admin\UpdateArtists.aspx" />
@@ -100,6 +102,7 @@
     <Content Include="Views\Shared\HomePrototype.aspx" />
     <Content Include="Views\Guest\LogIn.aspx" />
     <Content Include="Views\Guest\Register.aspx" />
+    <Content Include="Views\Shared\UpdateProfile.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +159,20 @@
     <Compile Include="Views\Admin\InsertAlbum.aspx.designer.cs">
       <DependentUpon>InsertAlbum.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Admin\UpdateAlbum.aspx.cs">
+      <DependentUpon>UpdateAlbum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\UpdateAlbum.aspx.designer.cs">
+      <DependentUpon>UpdateAlbum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\AlbumDetail.aspx.cs">
+      <DependentUpon>AlbumDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\AlbumDetail.aspx.designer.cs">
+      <DependentUpon>AlbumDetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Shared\ArtistDetail.aspx.cs">
       <DependentUpon>ArtistDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -204,6 +221,13 @@
     </Compile>
     <Compile Include="Views\Guest\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\UpdateProfile.aspx.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\UpdateProfile.aspx.designer.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebMasterForms\Master.Master.cs">
       <DependentUpon>Master.Master</DependentUpon>

@@ -24,5 +24,19 @@ namespace KPopZtation.Factories
 
             return album;
         }
+
+        public static Album createAlbumImportedId(int albumId, int artistId, string name, string desc, string image, int price, int stock)
+        {
+            Album album = new Album();
+            album.AlbumId = albumId;
+            album.AlbumName = name;
+            album.AlbumDescription = desc;
+            album.AlbumImage = image;
+            album.AlbumPrice = price;
+            album.AlbumStock = stock;
+            album.ArtistId = artistId;
+
+            return album;
+        }
     }
 }

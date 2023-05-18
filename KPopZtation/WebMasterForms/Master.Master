@@ -21,7 +21,7 @@
                         <li>
                             <asp:Button ID="transactionBtn" runat="server" Text="Transaction" OnClick="transactionBtn_Click" /></li>
                         <li>
-                            <asp:Button ID="updateProfileBtn" runat="server" Text="Update Profile" OnClick="updateProfileBtn_Click" /></li>
+                            <asp:Button ID="updateAdminProfileBtn" runat="server" Text="Update Profile" OnClick="updateProfileBtn_Click" /></li>
                         <li>
                             <asp:Button ID="LogOutAdminBtn" runat="server" Text="Log Out" OnClick="LogOutBtn_Click" /></li>
                     </ul>
@@ -35,7 +35,7 @@
                         <li><asp:Button ID="homeCustBtn" runat="server" Text="Home" OnClick="homeBtn_Click" /></li>
                         <li><a>Cart</a></li>
                         <li><a>Transaction</a></li>
-                        <li><a>Update Profile</a></li>
+                        <li><asp:Button ID="updateCustomerProfileBtn" runat="server" Text="Update Profile" OnClick="updateProfileBtn_Click" /></li>
                         <li><asp:Button ID="LogOutCustBtn" runat="server" Text="Log Out" OnClick="LogOutBtn_Click" /></li>
                     </ul>
                 </nav>

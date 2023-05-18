@@ -10,32 +10,36 @@ using System.Web.UI.WebControls;
 
 namespace KPopZtation.Views.Admin
 {
-    public partial class UpdateArtists : System.Web.UI.Page
+    public partial class UpdateAlbum : System.Web.UI.Page
     {
         int id;
         protected void Page_Load(object sender, EventArgs e)
         {
             id = Convert.ToInt32(Request["ID"]);
 
-            CurrentArtistGridView.DataSource = ArtistRepository.getArtistForGridView(id);
-            CurrentArtistGridView.DataBind();
+            currentAlbumGridView.DataSource = AlbumRepositories.GetAlbum(id);
+            currentAlbumGridView.DataBind();
+
         }
 
-        protected void updateBtn_Click(object sender, EventArgs e)
+        protected void updateAlbumBtn_Click(object sender, EventArgs e)
         {
             id = Convert.ToInt32(Request["ID"]);
 
-            Artist artist = ArtistRepository.getArtist(id);
+            Album artist = AlbumRepositories.GetAlbum(id);
 
-            FileUpload image = artistImgFile;
-            string name = ArtistNameTb.Text;
+            FileUpload image = albumImageFile;
+            string name = nameTbx.Text;
+            string desc = descTbx.Text;
+            int price = Convert.ToInt32(priceTbx.Value);
+            int stock = Convert.ToInt32(stockTbx.Value);
 
             errorLbl.ForeColor = System.Drawing.Color.Red;
-            errorLbl.Text = ArtistController.doUpdateArtist(id, name, image);
+            errorLbl.Text = AlbumController.doUpdateAlbum(id, name, desc, albumImageFile, price, stock);
 
             if (errorLbl.Text == "")
             {
-                artistImgFile.SaveAs(Server.MapPath("~/Assets/Images/" + artistImgFile.FileName));
+                albumImageFile.SaveAs(Server.MapPath("~/Assets/Images/" + albumImageFile.FileName));
                 errorLbl.ForeColor = System.Drawing.Color.Green;
                 errorLbl.Text = "Artist Updated succesfully";
                 Response.Redirect("~/Views/Shared/Home.aspx");

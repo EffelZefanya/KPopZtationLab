@@ -101,14 +101,25 @@ namespace KPopZtation.Controllers
             }
             if (response == "")
             {
+                response = checkDesc(desc);
+            }
+            if (response == "")
+            {
+                response = checkPrice(price);
+            }
+            if (response == "")
+            {
+                response = checkStock(stock);
+            }
+            if (response == "")
+            {
                 AlbumRepositories.addAlbum(artistId, name, desc, "~/Assets/Images/" + image.FileName, price, stock);
             }
             return response;
             
         }
 
-        /*
-        public static string doUpdateAlbum(int artistId, string name, string desc, FileUpload image, int price, int stock)
+        public static string doUpdateAlbum(int albumId, string name, string desc, FileUpload image, int price, int stock)
         {
             string response = "";
             if (response == "")
@@ -121,10 +132,21 @@ namespace KPopZtation.Controllers
             }
             if (response == "")
             {
-                AlbumRepositories.updateAlbum(artistId, name, desc, "~/Assets/Images/" + image.FileName, price, stock);
+                response = checkDesc(desc);
+            }
+            if (response == "")
+            {
+                response = checkPrice(price);
+            }
+            if (response == "")
+            {
+                response = checkStock(stock);
+            }
+            if (response == "")
+            {
+                AlbumRepositories.updateAlbum(albumId, name, desc, "~/Assets/Images/" + image.FileName, price, stock);
             }
             return response;
         }
-        */
     }
 }

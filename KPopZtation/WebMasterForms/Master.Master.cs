@@ -31,12 +31,12 @@ namespace KPopZtation.WebMasterForms
 
         protected void homeBtn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Views/Guest/LogIn.aspx");
+            Response.Redirect("~/Views/Shared/Home.aspx");
         }
 
         protected void updateProfileBtn_Click(object sender, EventArgs e)
         {
-            // Response.Redirect("~/Views/Guest/zzz.aspx");
+            Response.Redirect("~/Views/Shared/UpdateProfile.aspx");
         }
 
         protected void transactionBtn_Click(object sender, EventArgs e)

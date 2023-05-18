@@ -47,15 +47,15 @@ namespace KPopZtation.Repositories
             return db.SaveChanges();
         }
 
-        /*
-        public static string updateAlbum()
+        public static string updateAlbum(int albumId, string name, string desc, string image, int price, int stock)
         {
-            Artist artist = ArtistFactory.createArtist(name, imagePath);
-            deleteArtist(id);
-            db.Artists.Add(artist);
+            int artistId = (from x in db.Albums where x.AlbumId == albumId select x.ArtistId).FirstOrDefault();
+            Album album = AlbumFactory.createAlbumImportedId(albumId, artistId, name, desc, image, price, stock);
+            deleteAlbum(albumId);
+            db.Albums.Add(album);
             db.SaveChanges();
-            return;
-        }*/
+            return "Album succefully updated";
+        }
 
     }
 }

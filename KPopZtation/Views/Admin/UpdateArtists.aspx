@@ -4,6 +4,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Update Artist</h1>
     <main>
+        <asp:GridView ID="CurrentArtistGridView" runat="server"></asp:GridView>
+
         <div>
             <asp:Label ID="nameLbl" runat="server" Text="Artist Name"></asp:Label>
             <asp:TextBox ID="ArtistNameTb" runat="server"></asp:TextBox>

@@ -13,9 +13,11 @@ namespace KPopZtation.Views.Admin
     {
         Database1Entities db = Database.GetInstance();
         int id;
+        public string userRole;
         protected void Page_Load(object sender, EventArgs e)
         {
             id = Convert.ToInt32(Request["ID"]);
+            userRole = (string)Session["role"];
 
             artistGridView.DataSource = Repositories.ArtistRepository.getArtistForGridView(id);
             artistGridView.DataBind();
@@ -26,13 +28,22 @@ namespace KPopZtation.Views.Admin
 
         protected void AlbumGridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
+            GridViewRow row = artistGridView.Rows[e.RowIndex];
+            string id = row.Cells[0].Text.ToString();
+            int intId = int.Parse(id);
 
+            AlbumRepositories.deleteAlbum(intId);
+
+            artistGridView.DataSource = AlbumRepositories.GetAllAlbums();
+            artistGridView.DataBind();
         }
 
 
         protected void AlbumGridView_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
         {
-
+            GridViewRow row = AlbumGridView.Rows[e.NewSelectedIndex];
+            string id = row.Cells[0].Text.ToString();
+            Response.Redirect("~/Views/Shared/AlbumDetail.aspx?ID" + id);
         }
 
         protected void InsertAlbumBtn_Click(object sender, EventArgs e)
@@ -42,7 +53,16 @@ namespace KPopZtation.Views.Admin
 
         protected void AlbumGridView_RowEditing(object sender, GridViewEditEventArgs e)
         {
+            GridViewRow row = AlbumGridView.Rows[e.NewEditIndex];
+            string id = row.Cells[0].Text.ToString();
+            Response.Redirect("~/Views/Admin/UpdateAlbum.aspx?ID=" + id);
+        }
 
+        protected void AlbumGridView1_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        {
+            GridViewRow row = AlbumGridView.Rows[e.NewSelectedIndex];
+            string id = row.Cells[0].Text.ToString();
+            Response.Redirect("~/Views/Shared/AlbumDetail.aspx?ID" + id);
         }
     }
 }

@@ -20,5 +20,12 @@ namespace KPopZtation.Handlers
             Customer customer = Repositories.CustomerRepository.GetCustomer(email, password);
             return customer != null ? "Customer Account Created!" : "An error occured, account failed to be created.";
         }
+
+        public static string doUpdate(int id, string name, string email, string gender, string address, string password)
+        {
+            Repositories.CustomerRepository.updateCustomer(id, name, email, gender, address, password);
+            Customer customer = Repositories.CustomerRepository.GetCustomer(email, password);
+            return customer != null ? "Customer Account Updated!" : "An error occured, account failed to be created.";
+        }
     }
 }

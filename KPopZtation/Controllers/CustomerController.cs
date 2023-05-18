@@ -116,5 +116,31 @@ namespace KPopZtation.Controllers
             return response;
         }
 
+        public static string doUpdate(int id, string name, string email, string gender, string address, string password)
+        {
+            string response = checkName(name);
+            if (response.Equals(""))
+            {
+                response = checkGender(gender);
+            }
+            if (response.Equals(""))
+            {
+                response = checkAddress(address);
+            }
+            if (response.Equals(""))
+            {
+                response = checkEmail(email);
+            }
+            if (response.Equals(""))
+            {
+                response = checkPassword(password);
+            }
+            if (response.Equals(""))
+            {
+                response = CustomerHandler.doUpdate(id, name, email, gender, address, password);
+            }
+            return response;
+        }
+
     }
 }

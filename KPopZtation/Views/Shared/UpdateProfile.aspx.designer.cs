@@ -7,128 +7,128 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace KPopZtation.WebMasterForms
+namespace KPopZtation.Views.Shared
 {
 
 
-    public partial class Guest
+    public partial class UpdateProfile
     {
 
         /// <summary>
-        /// head control.
+        /// currentProfileGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.GridView currentProfileGridView;
 
         /// <summary>
-        /// form1 control.
+        /// nameLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label nameLbl;
 
         /// <summary>
-        /// homeAdminBtn control.
+        /// nameTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button homeAdminBtn;
+        protected global::System.Web.UI.WebControls.TextBox nameTxt;
 
         /// <summary>
-        /// transactionBtn control.
+        /// genderLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button transactionBtn;
+        protected global::System.Web.UI.WebControls.Label genderLbl;
 
         /// <summary>
-        /// updateAdminProfileBtn control.
+        /// genderDDL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button updateAdminProfileBtn;
+        protected global::System.Web.UI.WebControls.DropDownList genderDDL;
 
         /// <summary>
-        /// LogOutAdminBtn control.
+        /// addressLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LogOutAdminBtn;
+        protected global::System.Web.UI.WebControls.Label addressLbl;
 
         /// <summary>
-        /// homeCustBtn control.
+        /// addressTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button homeCustBtn;
+        protected global::System.Web.UI.WebControls.TextBox addressTxt;
 
         /// <summary>
-        /// updateCustomerProfileBtn control.
+        /// emailLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button updateCustomerProfileBtn;
+        protected global::System.Web.UI.WebControls.Label emailLbl;
 
         /// <summary>
-        /// LogOutCustBtn control.
+        /// emailTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LogOutCustBtn;
+        protected global::System.Web.UI.WebControls.TextBox emailTxt;
 
         /// <summary>
-        /// homeGuestBtn control.
+        /// passwordLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button homeGuestBtn;
+        protected global::System.Web.UI.WebControls.Label passwordLbl;
 
         /// <summary>
-        /// logInBtn control.
+        /// passwordTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button logInBtn;
+        protected global::System.Web.UI.WebControls.TextBox passwordTxt;
 
         /// <summary>
-        /// registerBtn control.
+        /// errorLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button registerBtn;
+        protected global::System.Web.UI.WebControls.Label errorLbl;
 
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// updateProfileBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Button updateProfileBtn;
     }
 }
