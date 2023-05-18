@@ -46,10 +46,11 @@ namespace KPopZtation.Repositories
             return "Artist succesfully removed";
         }
 
-        public static int deleteSomeAlbums(List<Album> listOfArlbum)
+        public static void deleteSomeAlbums(List<Album> listOfArlbum)
         {
             db.Albums.RemoveRange(listOfArlbum);
-            return db.SaveChanges();
+            db.SaveChanges();
+            return;
         }
 
         public static string updateAlbum(int albumId, string name, string desc, string image, int price, int stock)

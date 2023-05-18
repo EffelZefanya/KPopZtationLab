@@ -35,11 +35,12 @@ namespace KPopZtation.Repositories
             return "New artist data suceesfully inserted";
         }
 
-        public static int deleteArtist(int id)
+        public static void deleteArtist(int id)
         {
             Artist artist = getArtist(id);
             db.Artists.Remove(artist);
-            return db.SaveChanges();
+            db.SaveChanges();
+            return;
         }
 
         public static void updateArtist(int id, string name, string imagePath)

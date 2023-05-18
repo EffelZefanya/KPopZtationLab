@@ -1,4 +1,5 @@
-﻿using KPopZtation.Models;
+﻿using KPopZtation.Handlers;
+using KPopZtation.Models;
 using KPopZtation.Repositories;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,7 @@ namespace KPopZtation.Views.Shared
             string id = row.Cells[0].Text.ToString();
             int intId = int.Parse(id);
 
-            ArtistRepository.deleteArtist(intId);
+            generalHandlers.deleteArtistWithAlbum(intId);
 
             artistGridView.DataSource = Repositories.ArtistRepository.getAllArtist();
             artistGridView.DataBind();
