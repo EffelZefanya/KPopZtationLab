@@ -39,7 +39,7 @@ namespace KPopZtation.Repositories
             return;
         }
 
-        public static void CheckOut(int customerId)
+        public static void removeSomeCarts(int customerId)
         {
             List<Cart> cart = (from x in db.Carts where x.CustomerId == customerId select x).ToList();
             db.Carts.RemoveRange(cart);

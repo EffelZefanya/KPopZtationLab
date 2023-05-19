@@ -19,8 +19,7 @@ namespace KPopZtation.Factories
             }
             else
             {
-                artist.ArtistId = 2;
-                //please change this later to (from x in db.Artists select x.ArtistId).ToList().LastOrDefault() + 1
+                artist.ArtistId = (from x in db.Artists select x.ArtistId).ToList().LastOrDefault() + 1;
             }
             artist.ArtistName = name;
             artist.ArtistImage = imagePath;

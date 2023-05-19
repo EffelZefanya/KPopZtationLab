@@ -95,6 +95,7 @@
     <Content Include="Views\Admin\InsertAlbum.aspx" />
     <Content Include="Views\Admin\UpdateAlbum.aspx" />
     <Content Include="Views\Cust\CartPage.aspx" />
+    <Content Include="Views\Cust\TransactionHistory.aspx" />
     <Content Include="Views\Shared\AlbumDetail.aspx" />
     <Content Include="Views\Shared\ArtistDetail.aspx" />
     <Content Include="Views\Admin\InsertArtist.aspx" />
@@ -177,6 +178,13 @@
     </Compile>
     <Compile Include="Views\Cust\CartPage.aspx.designer.cs">
       <DependentUpon>CartPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cust\TransactionHistory.aspx.cs">
+      <DependentUpon>TransactionHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Cust\TransactionHistory.aspx.designer.cs">
+      <DependentUpon>TransactionHistory.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Shared\AlbumDetail.aspx.cs">
       <DependentUpon>AlbumDetail.aspx</DependentUpon>

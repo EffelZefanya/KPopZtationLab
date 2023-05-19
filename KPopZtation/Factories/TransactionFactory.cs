@@ -20,7 +20,7 @@ namespace KPopZtation.Factories
             }
             else
             {
-                transactionHeader.TransactionId = (from x in db.TransactionHeaders select x.TransactionId).LastOrDefault() + 1;
+                transactionHeader.TransactionId = (from x in db.TransactionHeaders select x.TransactionId).ToList().LastOrDefault() + 1;
             }
             transactionHeader.TransactionDate = DateTime.Today;
             transactionHeader.CustomerId = customerId;
